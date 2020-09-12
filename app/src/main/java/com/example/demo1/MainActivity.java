@@ -150,7 +150,10 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
                     mSwipeLayout.setRefreshing(false);
                     //修改adapter的数据
                     String url = "https://api.apiopen.top/getJoke?page=1&count=10&type=video";
-                    mData=new ArrayList<News>();
+                    //mData=new ArrayList<News>();
+                    if(mData!=null){
+                        mData.clear();
+                    }
                     setHttp(url);
                     isRefresh = false;
                 }
